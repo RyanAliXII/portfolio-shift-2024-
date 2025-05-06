@@ -1,0 +1,1 @@
+document.querySelector("#getInTouchButton").addEventListener("click",(function(){window.scrollTo(0,document.body.scrollHeight)})),document.querySelector(".year").innerText=(new Date).getFullYear().toString();
