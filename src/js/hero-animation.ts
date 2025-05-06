@@ -7,7 +7,7 @@ const arrow = document.querySelector("#arrow");
 const timeline = gsap.timeline();
 
 /*Converted these animations in CSS, However i still keep it just in case*/
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   greetings.classList.remove("hidden");
   summary.classList.remove("hidden");
   tagline.classList.remove("hidden");

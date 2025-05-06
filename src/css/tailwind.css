@@ -76,3 +76,10 @@
 #arrow {
   animation: arrowBounce 2s ease infinite;
 }
+
+.slide-btn {
+  @apply text-red-500 !important;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  @apply bg-red-500 !important;
+}

@@ -4,9 +4,7 @@ const projectSection = document.querySelector("#projects");
 const projectNav: HTMLDivElement = document.querySelector("#projectNav");
 const AcceptableWindowWidth = 1500;
 const recentProjectLists = document.querySelector("#recentProjectLists");
-const inDevelopmentProjectLists = document.querySelector(
-  "#inDevelopmentProjectLists"
-);
+
 
 const oldProjectLists = document.querySelector("#oldProjectLists");
 
@@ -14,9 +12,6 @@ const recentNav = document.querySelector("#recentNavList");
 const recentNavLine = recentNav.querySelector(".line");
 const recentNavText = recentNav.querySelector(".text");
 
-const inDevelopmentNav = document.querySelector("#inDevelopmentNavList");
-const inDevelopmentNavLine = inDevelopmentNav.querySelector(".line");
-const inDevelopmentNavText = inDevelopmentNav.querySelector(".text");
 
 const oldNav = document.querySelector("#oldNavList");
 const oldNavLine = oldNav.querySelector(".line");
@@ -105,6 +100,7 @@ window.addEventListener("load", () => {
   };
 
   const animateToInactive = (line: Element, text: Element) => {
+    console.log(text)
     const theme = getTheme();
     if (theme === "light") {
       gsap.fromTo(
@@ -146,30 +142,17 @@ window.addEventListener("load", () => {
   );
 
   recentProjectObserver.observe(recentProjectLists);
-  const inDevelopmentProjectObserver = new IntersectionObserver(
-    (entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting && window.innerWidth >= AcceptableWindowWidth) {
-        animateToActive(inDevelopmentNavLine, inDevelopmentNavText);
-      }
-      if (!entry.isIntersecting && window.innerWidth >= AcceptableWindowWidth) {
-        animateToInactive(inDevelopmentNavLine, inDevelopmentNavText);
-      }
-    },
-    { threshold: 1 }
-  );
-  inDevelopmentProjectObserver.observe(inDevelopmentProjectLists);
   const oldProjectObserver = new IntersectionObserver(
     (entries) => {
       const entry = entries[0];
       if (entry.isIntersecting && window.innerWidth >= AcceptableWindowWidth) {
-        animateToActive(oldNavLine, oldNav);
+        animateToActive(oldNavLine, oldNavText);
       }
       if (!entry.isIntersecting && window.innerWidth >= AcceptableWindowWidth) {
         animateToInactive(oldNavLine, oldNavText);
       }
     },
-    { threshold: 1 }
+    { threshold: 0.25 }
   );
   oldProjectObserver.observe(oldProjectLists);
 });
