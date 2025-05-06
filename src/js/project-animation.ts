@@ -100,7 +100,6 @@ window.addEventListener("load", () => {
   };
 
   const animateToInactive = (line: Element, text: Element) => {
-    console.log(text)
     const theme = getTheme();
     if (theme === "light") {
       gsap.fromTo(
