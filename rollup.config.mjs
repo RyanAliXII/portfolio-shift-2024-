@@ -30,13 +30,13 @@ export default [
       css({ inject: true }),
       copy({
         targets: [
-          { src: "src/pages/index.html", dest: "dist/pages/" },
+          { src: "src/index.html", dest: "dist/" },
           { src: "src/images", dest: "dist" },
         ],
       }),
       serve({
         open: true,
-        contentBase: ["dist", "dist/pages"],
+        contentBase: ["dist"],
         host: "localhost",
         port: "3000",
       }),

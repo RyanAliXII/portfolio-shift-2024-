@@ -30,7 +30,7 @@ export default [
       css({ inject: true, minify: true }),
       copy({
         targets: [
-          { src: "src/pages/index.html", dest: "dist/pages/" },
+          { src: "src/index.html", dest: "dist" },
           { src: "src/images", dest: "dist" },
         ],
       }),
