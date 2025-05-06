@@ -63,3 +63,7 @@ const initTheme = () => {
   replaceTogglerIcon(theme);
 };
 initTheme();
+
+document.addEventListener("DOMContentLoaded", () => {
+  themeTogglerButton.classList.remove("hidden");
+})

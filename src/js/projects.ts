@@ -6,7 +6,6 @@ import { Pagination, Navigation } from "swiper/modules";
 import {
   Project,
   RecentProjects,
-  InDevelopmentProjects,
   OldProjects,
 } from "./list-of-projects";
 import generateShortId from "./short-id";
@@ -86,8 +85,4 @@ const displayProjects = (placeholder: Element, projects: Project[]) => {
 
 // Display all projects on page load
 displayProjects(document.querySelector("#recentProjectLists"), RecentProjects);
-displayProjects(
-  document.querySelector("#inDevelopmentProjectLists"),
-  InDevelopmentProjects
-);
 displayProjects(document.querySelector("#oldProjectLists"), OldProjects);

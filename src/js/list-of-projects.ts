@@ -9,7 +9,7 @@ export type Project = {
 export const RecentProjects: Project[] = [
   {
     title: "STI College Munoz-EDSA Library System",
-    link: "https://github.com/RyanAliXII/sti-munoz-library-system",
+    link: "https://library.acad-stimunoz.space",
     images: [
       "../images/library-system/home.png",
       "../images/library-system/dashboard.png",
@@ -52,23 +52,6 @@ export const RecentProjects: Project[] = [
     stacks: ["TypeScript", "Express", "Webpack", "Vue.JS", "PostgreSQL"],
   },
 ];
-
-export const InDevelopmentProjects = [
-  {
-    title: "Blog Application",
-    link: "https://github.com/RyanAliXII/blog-application",
-    images: [
-      "../images/blog-app/home.png",
-      "../images/blog-app/dashboard.png",
-      "../images/blog-app/blog.png",
-      "../images/blog-app/login.png",
-    ],
-    description:
-      "The blog application is designed to empower users in crafting and managing their online presence with ease. It offers intuitive tools for creating, editing, and publishing posts, moderating comments, and tracking engagement through detailed analytics, all within a sleek, user-friendly interface. Whether you're a seasoned blogger or just starting out, this app streamlines your content creation process and helps you grow your audience with confidence.",
-    stacks: ["C#", "ASP.NET", "Vue.JS", "Rollup", "MSSQL"],
-  },
-];
-
 export const OldProjects = [
   {
     title: "Contact Tracing Progressive Web Application",
